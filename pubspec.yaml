@@ -1,0 +1,39 @@
+name: ade_workbench
+description: "Responsive ADE workspace composed from Beautiful AI UI."
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.13.0 <4.0.0"
+  flutter: ">=3.47.0"
+
+dependencies:
+  beautiful_ai_ui:
+    git:
+      url: https://github.com/pawaovo/shadcn_flutter.git
+      ref: 57f92553c111dca10f97ad097c507c2fdacffc9f
+      path: packages/beautiful_ai_ui
+  cupertino_icons: 1.0.9
+  file_selector: 1.1.0
+  web: ^1.1.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  shared_preferences: 2.5.5
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+# Keep the component foundation aligned with beautiful_ai_ui.
+dependency_overrides:
+  shadcn_flutter:
+    git:
+      url: https://github.com/pawaovo/shadcn_flutter.git
+      ref: 57f92553c111dca10f97ad097c507c2fdacffc9f
+      path: packages/shadcn_flutter
